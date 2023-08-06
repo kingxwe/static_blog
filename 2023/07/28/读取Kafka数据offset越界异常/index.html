@@ -13,19 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://blog.jinla.fun/archives/"/>
+    <link rel="canonical" href="https://blog.jinla.fun/2023/07/28/读取kafka数据offset越界异常/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="博客，AI，技术，JAVA">
-<meta property="og:type" content="website">
-<meta property="og:title" content="随记">
-<meta property="og:url" content="https://blog.jinla.fun/archives/index.html">
+        <meta name="description" content="现象SparkStreaming读取kakfa报错OffsetOutOfRangeException 排查原因Kafka的Offset：Kafka的Offset是一个表示消息在分区中位置的标识符。每个分区的消息都有一个唯一的Offset，它是一个64位的整数。Offset在分区中起到了类似数据库中主键的作用，确保每条消息都有一个唯一的标识。 消费者通过指定一个特定的Offset来读取消息，这使得消">
+<meta property="og:type" content="article">
+<meta property="og:title" content="读取Kafka数据offset越界异常">
+<meta property="og:url" content="https://blog.jinla.fun/2023/07/28/%E8%AF%BB%E5%8F%96Kafka%E6%95%B0%E6%8D%AEoffset%E8%B6%8A%E7%95%8C%E5%BC%82%E5%B8%B8/index.html">
 <meta property="og:site_name" content="随记">
-<meta property="og:description" content="博客，AI，技术，JAVA">
+<meta property="og:description" content="现象SparkStreaming读取kakfa报错OffsetOutOfRangeException 排查原因Kafka的Offset：Kafka的Offset是一个表示消息在分区中位置的标识符。每个分区的消息都有一个唯一的Offset，它是一个64位的整数。Offset在分区中起到了类似数据库中主键的作用，确保每条消息都有一个唯一的标识。 消费者通过指定一个特定的Offset来读取消息，这使得消">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-28T05:56:40.000Z">
+<meta property="article:modified_time" content="2023-08-06T03:04:21.632Z">
 <meta property="article:author" content="金XX">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
     
     
@@ -38,7 +41,7 @@
     
     <title>
         
-            Archive -
+            读取Kafka数据offset越界异常 -
         
         沙海拾金
     </title>
@@ -188,48 +191,231 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">读取Kafka数据offset越界异常</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Jinla</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-07-28 13:56:40</span>
+        <span class="mobile">2023-07-28 13:56</span>
+        <span class="hover-info">Created</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[4]</span>
-            </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='08-06'>
-                <a href="/2023/08/06/%E4%BF%AE%E5%A4%8Dngbatis%E8%AF%BB%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/">
-                  <span class="article-title">修复ngbatis读取远程配置问题</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='07-28'>
-                <a href="/2023/07/28/%E8%AF%BB%E5%8F%96Kafka%E6%95%B0%E6%8D%AEoffset%E8%B6%8A%E7%95%8C%E5%BC%82%E5%B8%B8/">
-                  <span class="article-title">读取Kafka数据offset越界异常</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='07-20'>
-                <a href="/2023/07/20/ubuntu%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%83%A8%E7%BD%B2Wenda/">
-                  <span class="article-title">ubuntu在阿里云环境下部署Wenda</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='05-27'>
-                <a href="/2023/05/27/AI%E7%BB%98%E7%94%BB/">
-                  <span class="article-title">AI绘画</span>
-                </a>
-              </li>
-              
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-08-06 11:04:21</span>
+            <span class="mobile">2023-08-06 11:04</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/java/">java</a>&nbsp;
+                    </li>
+                
             </ul>
-        </section>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>SparkStreaming读取kakfa报错OffsetOutOfRangeException</p>
+<h3 id="排查原因"><a href="#排查原因" class="headerlink" title="排查原因"></a>排查原因</h3><h4 id="Kafka的Offset："><a href="#Kafka的Offset：" class="headerlink" title="Kafka的Offset："></a>Kafka的Offset：</h4><p>Kafka的Offset是一个表示消息在分区中位置的标识符。每个分区的消息都有一个唯一的Offset，它是一个64位的整数。Offset在分区中起到了类似数据库中主键的作用，确保每条消息都有一个唯一的标识。</p>
+<p>消费者通过指定一个特定的Offset来读取消息，这使得消费者可以控制从哪里开始读取数据。一旦消费者读取了一条消息，它可以记录下来这个消息的Offset，以便下次继续从该Offset处读取新的消息。</p>
+<h4 id="定时清理："><a href="#定时清理：" class="headerlink" title="定时清理："></a>定时清理：</h4><p>Kafka的分区中的消息在默认情况下是持久的，不会自动被删除。但是，Kafka提供了一种定时清理（Compaction）的机制，用于删除旧的、重复的消息，以节省磁盘空间。</p>
+<p>当定时清理被启用后，Kafka会定期检查分区中的消息，并将相同Key的消息进行合并，只保留最新的一条消息，其它旧的消息将被删除。这样可以确保每个Key在分区中只有最新的数据，而旧的数据被清理掉。</p>
+<p>对于定时清理后的数据，其Offset并不会自动更新或重置。Offset仍然是按照消息被追加到分区的顺序生成的，只是旧的、重复的消息被删除了，而且对应的Offset也会自动更新到最新的位置。因此，消费者在进行消费时仍然可以按照Offset来读取分区中的消息，只是已经被清理的旧消息将不再可见。</p>
+<h4 id="实际错误原因"><a href="#实际错误原因" class="headerlink" title="实际错误原因"></a>实际错误原因</h4><p>对于Spark消费者来说，它使用的是消费者组（Consumer Group）来管理Offset。Spark消费者在消费消息时会将消费的进度（Offset）保存在Kafka内部的特殊主题<code>__consumer_offsets</code>中，而不是直接和Kafka分区中的消息Offset直接关联。</p>
+<p>当Kafka中的数据被清理后，部分或全部旧的消息被删除，但<code>__consumer_offsets</code>主题中的消费者组Offset信息并不会随之更新，因为这些信息是由Spark消费者自行管理的，Kafka并不清楚这些信息的具体内容。</p>
+<p>当Kafka停机时间超过数据保留时间后，Spark消费者组中的Offset可能会过期，指向了已被清理的消息。当Spark消费者再次启动尝试从过期的Offset处消费消息时，就会导致<code>OffsetOutOfRangeException</code>错误，因为该Offset对应的数据已经不存在了。</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
+<li>在Spark消费者启动之前，检查对应Topic的数据保留策略，确保Spark消费者的消费者组Offset不会过期。</li>
+<li>如果Spark消费者发现<code>OffsetOutOfRangeException</code>错误，可以尝试使用Kafka提供的<code>seekToBeginning</code>或<code>seekToEnd</code>方法重新定位到最早或最新的Offset处继续消费。</li>
+<li>在Kafka的数据保留策略和Spark消费者组Offset管理上，根据业务需求进行调整，确保两者之间的一致性。</li>
+</ol>
+<p>总的来说，要避免<code>OffsetOutOfRangeException</code>错误，需要保证Spark消费者的Offset管理和Kafka的数据保留策略之间的一致性，以及在恢复消费时做好异常处理和重新定位的策略。</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 读取Kafka数据offset越界异常</li>
+        <li><strong>Author:</strong> Jinla</li>
+        <li><strong>Created at:</strong> 2023-07-28 13:56:40</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-08-06 11:04:21
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/07/28/读取Kafka数据offset越界异常/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/java/">#java</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/08/06/%E4%BF%AE%E5%A4%8Dngbatis%E8%AF%BB%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">修复ngbatis读取远程配置问题</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/07/20/ubuntu%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%83%A8%E7%BD%B2Wenda/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">ubuntu在阿里云环境下部署Wenda</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">读取Kafka数据offset越界异常</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E8%B1%A1"><span class="nav-text">现象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E6%9F%A5%E5%8E%9F%E5%9B%A0"><span class="nav-text">排查原因</span></a></li></ol>
+
     </div>
 </div>
+            </div>
+        
+    </div>
+</div>
+
 
                 
 
@@ -305,6 +491,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -416,6 +623,16 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
     
 </div>
 

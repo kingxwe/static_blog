@@ -13,36 +13,25 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://blog.jinla.fun/2023/05/27/ai绘画/"/>
+    <link rel="canonical" href="https://blog.jinla.fun/2023/08/06/修复ngbatis读取远程配置问题/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="关于最近很火热的AI绘画，确实很方便很快，在这里记录一下我利用 Stable Diffusion完成对日常拍摄的照片进行改造的过程 环境 Stable Diffusion 安装启动参考 秋叶大神   Win11  显卡   NVIDIA GeForce RTX 3070    驱动程序版本:	31.0.15.1694   驱动程序日期:	2022&#x2F;7&#x2F;21   DirectX 版本:	12 (FL">
+        <meta name="description" content="现象ApplicationContextInitializer 执行两次，第一次未读取到nacos远程配置，第二次读到所有，第一次依旧进行初始化，倒是ngbatis初始化时报错。 分析ApplicationContextInitializer两次执行原因分析springcloud创建 id为bootstrap 的ApplicationContext，该context后续作为main Applica">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AI绘画">
-<meta property="og:url" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/index.html">
+<meta property="og:title" content="修复ngbatis读取远程配置问题">
+<meta property="og:url" content="https://blog.jinla.fun/2023/08/06/%E4%BF%AE%E5%A4%8Dngbatis%E8%AF%BB%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="随记">
-<meta property="og:description" content="关于最近很火热的AI绘画，确实很方便很快，在这里记录一下我利用 Stable Diffusion完成对日常拍摄的照片进行改造的过程 环境 Stable Diffusion 安装启动参考 秋叶大神   Win11  显卡   NVIDIA GeForce RTX 3070    驱动程序版本:	31.0.15.1694   驱动程序日期:	2022&#x2F;7&#x2F;21   DirectX 版本:	12 (FL">
+<meta property="og:description" content="现象ApplicationContextInitializer 执行两次，第一次未读取到nacos远程配置，第二次读到所有，第一次依旧进行初始化，倒是ngbatis初始化时报错。 分析ApplicationContextInitializer两次执行原因分析springcloud创建 id为bootstrap 的ApplicationContext，该context后续作为main Applica">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124253.jpg">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124326.png">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124430.png">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124530.png">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124044.jpg">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527123952.jpg">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124719.png">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527125014.png">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527125041.png">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527130334.png">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527130830.png">
-<meta property="og:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527130837.png">
-<meta property="article:published_time" content="2023-05-27T02:07:24.000Z">
-<meta property="article:modified_time" content="2023-05-27T08:00:52.658Z">
+<meta property="og:image" content="https://blog.jinla.fun/2023/08/06/%E4%BF%AE%E5%A4%8Dngbatis%E8%AF%BB%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/image-20230806112103486.png">
+<meta property="article:published_time" content="2023-08-06T03:06:24.000Z">
+<meta property="article:modified_time" content="2023-08-06T03:24:03.339Z">
 <meta property="article:author" content="金XX">
-<meta property="article:tag" content="AI">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.jinla.fun/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124253.jpg">
+<meta name="twitter:image" content="https://blog.jinla.fun/2023/08/06/%E4%BF%AE%E5%A4%8Dngbatis%E8%AF%BB%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/image-20230806112103486.png">
     
     
     <!--- Icon Part-->
@@ -54,7 +43,7 @@
     
     <title>
         
-            AI绘画 -
+            修复ngbatis读取远程配置问题 -
         
         沙海拾金
     </title>
@@ -210,7 +199,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">AI绘画</h1>
+                    <h1 class="article-title-regular">修复ngbatis读取远程配置问题</h1>
                 </div>
             
                 
@@ -232,15 +221,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-05-27 10:07:24</span>
-        <span class="mobile">2023-05-27 10:07</span>
+        <span class="desktop">2023-08-06 11:06:24</span>
+        <span class="mobile">2023-08-06 11:06</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-05-27 16:52</span>
-            <span class="mobile">2023-05-27 16</span>
+            <span class="desktop">2023-08-06 11:24:03</span>
+            <span class="mobile">2023-08-06 11:24</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -252,7 +241,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/AI/">AI</a>&nbsp;
+                        <a href="/tags/Java/">Java</a>&nbsp;
                     </li>
                 
             </ul>
@@ -275,36 +264,18 @@
             
 
             <div class="article-content markdown-body">
-                <p>关于最近很火热的AI绘画，确实很方便很快，在这里记录一下我利用 Stable Diffusion完成对日常拍摄的照片进行改造的过程</p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
-<li><p>Stable Diffusion 安装启动参考 <a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iM4y1y7oA/">秋叶大神 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-</li>
-<li><p>Win11</p>
-</li>
-<li><p>显卡</p>
-<pre><code>  NVIDIA GeForce RTX 3070
+                <h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>ApplicationContextInitializer 执行两次，第一次未读取到nacos远程配置，第二次读到所有，第一次依旧进行初始化，倒是ngbatis初始化时报错。</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>ApplicationContextInitializer两次执行原因分析<br>springcloud创建 id为bootstrap 的ApplicationContext，该context后续作为main ApplicationContext的parent。同时，bootstrap也是由SpringApplication.run方法创建。<br>在SpringApplication.run方法中，通过spi的机制获取ApplicationContextInitializer，并执行其initialize方法<br>bootstrap和application都执行了一次ApplicationContextInitializer的initialize方法，故在现象上看到两次执行记录</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>修改ngbatis源码，NgbatisContextInitializer类 ， initialize时增加判断：存在nebula.hosts时才进行初始化</p>
+<p><img lazyload src="/images/loading.svg" data-src="/2023/08/06/%E4%BF%AE%E5%A4%8Dngbatis%E8%AF%BB%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/image-20230806112103486.png" alt="image-20230806112103486"></p>
+<p>以上修改已提交ngbatis作为贡献。</p>
+<h3 id="适配-初始化自动加载baseDao"><a href="#适配-初始化自动加载baseDao" class="headerlink" title="适配 初始化自动加载baseDao"></a>适配 初始化自动加载baseDao</h3><h3 id="现象-1"><a href="#现象-1" class="headerlink" title="现象"></a>现象</h3><p>需要手动在SpringBootApplication中增加scanBasePackages 导致使用成本增加</p>
+<h3 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h3><p>新增NgbatisConfig类扫描第三方插件库</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import org.slf4j.Logger;</span><br><span class="line">import org.slf4j.LoggerFactory;</span><br><span class="line">import org.springframework.boot.autoconfigure.domain.EntityScan;</span><br><span class="line">import org.springframework.context.EnvironmentAware;</span><br><span class="line">import org.springframework.context.annotation.ComponentScan;</span><br><span class="line">import org.springframework.context.annotation.ComponentScans;</span><br><span class="line">import org.springframework.context.annotation.Configuration;</span><br><span class="line">import org.springframework.core.env.Environment;</span><br><span class="line"></span><br><span class="line">@ComponentScans(&#123;@ComponentScan(&#123;&quot;com.youpath.nebulagraph&quot;&#125;)&#125;)</span><br><span class="line">@EntityScan(</span><br><span class="line">    basePackages = &#123;&quot;com.youpath.nebulagraph&quot;&#125;</span><br><span class="line">)</span><br><span class="line">@Configuration</span><br><span class="line">public class NgbatisConfig implements EnvironmentAware &#123;</span><br><span class="line">    private static final Logger log = LoggerFactory.getLogger(NgbatisConfig.class);</span><br><span class="line"></span><br><span class="line">    public NgbatisConfig() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void setEnvironment(Environment environment) &#123;</span><br><span class="line">        log.info(&quot;init NebulaDaoBasic&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-  驱动程序版本:	31.0.15.1694
-  驱动程序日期:	2022/7/21
-  DirectX 版本:	12 (FL 12.1)
-  物理位置：	PCI 总线 8、设备 0、功能 0
+<p>在resources 文件夹下创建 META-INF 文件夹，在META-INF 文件夹内创建 spring.factories 文件<br>spring.factories 文件内容如下</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.boot.autoconfigure.EnableAutoConfiguration=\</span><br><span class="line">        com.youpath.nebulagraph.config.NgbatisConfig</span><br></pre></td></tr></table></figure></div>
 
-  利用率	3%
-  专用 GPU 内存	5.5/8.0 GB
-  共享 GPU 内存	0.2/15.9 GB
-  GPU 内存	5.7/23.9 GB
-</code></pre>
-</li>
-</ul>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><p>启动服务后，应该在网页弹出一个窗口<br>我试图让他根据一张云的图片，处理掉里面的电线并且把云勾勒出一个手绘龙的形状。<br>在<a class="link" target="_blank" rel="noopener" href="https://civitai.com/models/12597/moxin">C站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 搜了一下喜欢的画风，选择了墨心的微调模型<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124253.jpg" alt="Img"><br>根据推荐的基础模型，在大佬的工具中下载对应的模型<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124326.png" alt="Img"><br>下载完成后，可以在Additional Networks插件处看到对应的模型<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124430.png" alt="Img"><br>在图生图中向下拉可以找到同样的插件<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124530.png" alt="Img"><br>根据大佬的配比选择墨心权重0.8,疏可走马1。<br>进入应用页面后，点击CLIP反推生成关键字，然后点击生成，可以对应修改自己的关键字改变部分逻辑<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124044.jpg" alt="Img"><br>调试完成后生成的效果如下<br>原图：<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527123952.jpg" alt="Img"><br>转化后：<br>原生关键字<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527124719.png" alt="Img"><br>加上龙的关键字后<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527125014.png" alt="Img"></p>
-<p>这个画风是转化很多次，调整重绘幅度为0.4之后生成的，如果重绘幅度太高的会，最后就完全和你这种图没什么关系了。<br>比如：<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527125041.png" alt="Img"></p>
-<h3 id="测试关键字文生图"><a href="#测试关键字文生图" class="headerlink" title="测试关键字文生图"></a>测试关键字文生图</h3><p>在C站找了个喜欢的画风，点击图片获取关键字<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527130334.png" alt="Img"><br>复制Prompt和Negative prompt内容，选择对应的模型Model，步数Steps,Sampler采样方法<br>选择好模型后就能开始生成了<br>同样的提示词，不同的模型效果：<br>国风3.2<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527130830.png" alt="Img"><br>墨心：<br><img lazyload src="/images/loading.svg" data-src="/2023/05/27/AI%E7%BB%98%E7%94%BB/img-20230527130837.png" alt="Img"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li>环境搭建有大量的大佬辅助现在已经很简单了，还有视频教程文字教程</li>
-<li>搭建好环境后，对电脑的配置还是有一定的要求，我3070的显卡明显就不是很够用，生成大图片就会OOM</li>
-<li>环境搭建好有一定的生成常识后，作为普通用户还是去寻找自己喜欢的模型，然后辅助对自己的照片做一些处理也好，直接文字生成也好都是挺方便的</li>
-<li>整体最麻烦的部分就是关键字和调参数，后续看看能不能让ChatGpt协助进行一个关键字提示词的生成，进一步简化这个生成的难度</li>
-</ul>
 
             </div>
 
@@ -312,16 +283,16 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> AI绘画</li>
+        <li><strong>Title:</strong> 修复ngbatis读取远程配置问题</li>
         <li><strong>Author:</strong> Jinla</li>
-        <li><strong>Created at:</strong> 2023-05-27 10:07:24</li>
+        <li><strong>Created at:</strong> 2023-08-06 11:06:24</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-05-27 16:00:52
+                <strong>Updated at:</strong> 2023-08-06 11:24:03
             </li>
         
         <li>
-            <strong>Link:</strong> https://redefine.ohevan.com/2023/05/27/AI绘画/
+            <strong>Link:</strong> https://redefine.ohevan.com/2023/08/06/修复ngbatis读取远程配置问题/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -336,7 +307,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/AI/">#AI</a>&nbsp;
+                            <a href="/tags/Java/">#Java</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -347,21 +318,21 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/07/20/ubuntu%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%83%A8%E7%BD%B2Wenda/"
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/07/28/%E8%AF%BB%E5%8F%96Kafka%E6%95%B0%E6%8D%AEoffset%E8%B6%8A%E7%95%8C%E5%BC%82%E5%B8%B8/"
                             >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">ubuntu在阿里云环境下部署Wenda</span>
-                                    <span class="post-nav-item">Prev posts</span>
+                                    <span class="post-nav-title-item">读取Kafka数据offset越界异常</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
                                 </span>
                             </a>
                         </div>
-                    
                     
                 </div>
             
@@ -419,8 +390,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">AI绘画</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-text">简单使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%85%B3%E9%94%AE%E5%AD%97%E6%96%87%E7%94%9F%E5%9B%BE"><span class="nav-text">测试关键字文生图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></li></ol>
+        <div class="page-title">修复ngbatis读取远程配置问题</div>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E8%B1%A1"><span class="nav-text">现象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E9%85%8D-%E5%88%9D%E5%A7%8B%E5%8C%96%E8%87%AA%E5%8A%A8%E5%8A%A0%E8%BD%BDbaseDao"><span class="nav-text">适配 初始化自动加载baseDao</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E8%B1%A1-1"><span class="nav-text">现象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-1"><span class="nav-text">解决方案</span></a></li></ol>
 
     </div>
 </div>

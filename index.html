@@ -13,17 +13,19 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/"/>
+    <link rel="canonical" href="https://blog.jinla.fun/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+        <meta name="description" content="博客，AI，技术，JAVA">
+<meta property="og:type" content="website">
+<meta property="og:title" content="随记">
+<meta property="og:url" content="https://blog.jinla.fun/index.html">
+<meta property="og:site_name" content="随记">
+<meta property="og:description" content="博客，AI，技术，JAVA">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="金XX">
 <meta name="twitter:card" content="summary">
     
     
@@ -54,7 +56,7 @@
     
     <script id="hexo-configurations">
     let Global = window.Global || {};
-    Global.hexo_config = {"hostname":"example.com","root":"/","language":"en"};
+    Global.hexo_config = {"hostname":"blog.jinla.fun","root":"/","language":"en"};
     Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"心之所欲，无所不乐","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.1.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
     Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
     Global.data_config = {"masonry":false};
@@ -212,7 +214,7 @@
                 </div>
                 <div class="statistics">
                     <a class="item" href="/tags">
-                        <div class="number">1</div>
+                        <div class="number">3</div>
                         <div class="label">Tags</div>
                     </a>
                     <a class="item" href="/categories">
@@ -220,7 +222,7 @@
                         <div class="label">Categories</div>
                     </a>
                     <a class="item" href="/archives">
-                        <div class="number">1</div>
+                        <div class="number">4</div>
                         <div class="label">Posts</div>
                     </a>
                 </div>
@@ -237,6 +239,154 @@
                 
                     <div class="home-content-container fade-in-down-animation">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/08/06/%E4%BF%AE%E5%A4%8Dngbatis%E8%AF%BB%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/">
+                        修复ngbatis读取远程配置问题
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        现象ApplicationContextInitializer 执行两次，第一次未读取到nacos远程配置，第二次读到所有，第一次依旧进行初始化，倒是ngbatis初始化时报错。
+分析ApplicationContextInitializer两次执行...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Aug 06 2023 11:06:24 GMT+0800">
+                
+                    2023-08-06
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Java/">Java</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2023/08/06/%E4%BF%AE%E5%A4%8Dngbatis%E8%AF%BB%E5%8F%96%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/">Read more<span class="seo-reader-text">修复ngbatis读取远程配置问题</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/07/28/%E8%AF%BB%E5%8F%96Kafka%E6%95%B0%E6%8D%AEoffset%E8%B6%8A%E7%95%8C%E5%BC%82%E5%B8%B8/">
+                        读取Kafka数据offset越界异常
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        现象SparkStreaming读取kakfa报错OffsetOutOfRangeException
+排查原因Kafka的Offset：Kafka的Offset是一个表示消息在分区中位置的标识符。每个分区的消息都有一个唯一的Offset，它是一个64...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Jul 28 2023 13:56:40 GMT+0800">
+                
+                    2023-07-28
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/java/">java</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2023/07/28/%E8%AF%BB%E5%8F%96Kafka%E6%95%B0%E6%8D%AEoffset%E8%B6%8A%E7%95%8C%E5%BC%82%E5%B8%B8/">Read more<span class="seo-reader-text">读取Kafka数据offset越界异常</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/07/20/ubuntu%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%83%A8%E7%BD%B2Wenda/">
+                        ubuntu在阿里云环境下部署Wenda
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        申请环境阿里云目前有免费的机器学习 GPU 服务器可以试用，免费试用活动页https://free.aliyun.com 只要没有申请过 PAI-DSW 资源的新老用户皆可申请 5000CU 的免费额度，3个月内使用。
+
+如果需要持久化保存环境，您可...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Jul 20 2023 14:01:20 GMT+0800">
+                
+                    2023-07-20
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/AI/">AI</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2023/07/20/ubuntu%E5%9C%A8%E9%98%BF%E9%87%8C%E4%BA%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%83%A8%E7%BD%B2Wenda/">Read more<span class="seo-reader-text">ubuntu在阿里云环境下部署Wenda</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
         
             <li class="home-article-item">
 
